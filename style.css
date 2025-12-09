@@ -1,0 +1,504 @@
+/* ---------- Global Styles ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------- Header & Navigation ---------- */
+
+.main-header {
+    background: #111827;
+    color: #f9fafb;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main-header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.main-header nav {
+    display: flex;
+    gap: 18px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 0.98rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-link:hover {
+    background: #1f2937;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* ---------- Main Layout ---------- */
+
+.content-section {
+    max-width: 1100px;
+    margin: 30px auto 40px;
+    padding: 0 20px;
+}
+
+/* ---------- Home Intro Section ---------- */
+
+.home-intro-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    margin-bottom: 30px;
+}
+
+.intro-text h2 {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.intro-text p {
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.home-photo {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2563eb;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.25);
+    flex-shrink: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-photo:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.35);
+}
+
+/* ---------- Expertise Section ---------- */
+
+.expertise-overview {
+    margin: 35px 0 10px;
+}
+
+.expertise-overview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.expertise-card {
+    background: #ffffff;
+    padding: 18px 16px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expertise-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.expertise-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.expertise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+}
+
+/* ---------- Skills Section ---------- */
+
+.skills-showcase {
+    margin: 35px 0 20px;
+}
+
+.skills-showcase h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background: #e5edff;
+    color: #1d4ed8;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #bfdbfe;
+}
+
+/* ---------- CTA Section ---------- */
+
+.cta-section {
+    margin: 40px 0 10px;
+    padding: 24px 20px;
+    background: linear-gradient(135deg, #1d4ed8, #4f46e5);
+    border-radius: 18px;
+    color: #e5e7eb;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(55, 65, 81, 0.35);
+}
+
+.cta-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f9fafb;
+}
+
+.cta-section p {
+    font-size: 0.98rem;
+    margin-bottom: 18px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 0.96rem;
+    font-weight: 500;
+    background: #f9fafb;
+    color: #1d4ed8;
+    border: 1px solid transparent;
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.35);
+}
+
+.secondary-cta {
+    background: transparent;
+    color: #e5e7eb;
+    border-color: #e5e7eb;
+}
+
+.secondary-cta:hover {
+    background: rgba(249, 250, 251, 0.1);
+}
+
+/* ---------- Footer ---------- */
+
+.main-footer {
+    text-align: center;
+    padding: 16px 10px 22px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    background: #f3f4f6;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+@media (max-width: 900px) {
+    .home-intro-flex {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-photo {
+        margin-top: 10px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 16px 18px;
+    }
+
+    .main-header h1 {
+        font-size: 1.1rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 0 14px;
+    }
+}
+/* ---------- Global Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Body ---------- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+.main-header {
+    background: #111827;
+    color: #f9fafb;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-size: 1.4rem;
+}
+
+.main-header nav {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-link {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 999px;
+    
+}
+
+.nav-link:hover {
+    background: #1f2937;
+    color: #fff;
+}
+
+.nav-link.active {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* ---------- Main Section ---------- */
+.content-section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- Profile Header ---------- */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2563eb;
+    margin-bottom: 12px;
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+}
+
+.profile-header h2 {
+    font-size: 1.6rem;
+    color: #111827;
+}
+
+/* ---------- Bio-data Table ---------- */
+.biodata-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.biodata-table th,
+.biodata-table td {
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+
+.biodata-table th {
+    width: 35%;
+    background: #f1f5f9;
+    color: #111827;
+    text-align: left;
+    font-weight: 600;
+}
+
+.biodata-table td {
+    background: #ffffff;
+    color: #374151;
+}
+
+/* ---------- Section Headings ---------- */
+section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #111827;
+    border-bottom: 2px solid #2563eb;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+/* ---------- Lists ---------- */
+section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* ---------- Paragraph ---------- */
+section p {
+    margin-top: 10px;
+    font-size: 0.96rem;
+    color: #4b5563;
+}
+
+/* ---------- Footer ---------- */
+.main-footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.85rem;
+    background: #f3f4f6;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 30px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 18px 20px;
+    }
+
+    .content-section {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .biodata-table th {
+        width: 45%;
+    }
+}
+/* ---------- Resume Layout ---------- */
+
+.resume {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 28px 26px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- Resume Header ---------- */
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.resume-header .name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+.resume-header .location {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.resume-header .contact {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.resume-header .contact a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.resume-header .contact a:hover {
+    text-decoration: underline;
+}
+
+.resume-header .separator {
+    margin: 0 8px;
+    color: #9ca3af;
+}
+
+/* ---------- Resume Sections ---------- */
+
+.section {
+    margin-top: 22px;
+}
+
